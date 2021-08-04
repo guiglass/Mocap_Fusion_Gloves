@@ -2,5 +2,5 @@
 Arduino/SteamVR motion capture gloves for AnimationPrepStudio. 
 
 
-![Code Example 1](https://raw.githubusercontent.com/guiglass/AnimationPrepStudio-ArduGlove/master/Code Example 1/connection_guide_template_1.png)
+![Code Example 1](https://github.com/guiglass/Mocap_Fusion_Gloves/blob/main/Code%20Example%201/connection_guide_template_1.png)
 
