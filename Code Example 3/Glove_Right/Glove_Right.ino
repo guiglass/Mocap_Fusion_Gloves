@@ -10,8 +10,8 @@
 #include <nRF24L01.h>
 #include <RF24.h>
 
-#define CE_PIN  49
-#define CSN_PIN 48
+#define CE_PIN  9
+#define CSN_PIN 10
 
 const byte thisSlaveAddress[5] = {'R','x','A','A','B'}; //RIGHT HAND ADDRESS
 
