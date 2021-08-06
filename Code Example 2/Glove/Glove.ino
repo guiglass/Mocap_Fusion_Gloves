@@ -1,10 +1,8 @@
 /*
- * Copyright 2021 Animation Prep Studios - All rights reserved.
- * If you use this code in production or other products you must give attribution to Animation Prep Studios.
- * 
- * This example shows simple wireless communication using a Arduino Mega with nRF24+ radio that sends data to a Arduino Uno with nRF24+ attached to a PC running Animation Prep Studio - Mocap Fusion (LUXOR).
+ * The LUXOR Mocap Gloves wireless example demonstrates communication with an nRF24+ radio on a receiving Arduion coneected to a PC running AnimationPrepStudio.
  * Each analog input reads the bend value of a SEN-08606 Flex Sensors (4.5" typical).
  */
+
 
 #include <SPI.h>
 #include <nRF24L01.h>
@@ -13,7 +11,7 @@
 #define CE_PIN  49
 #define CSN_PIN 48
 
-const byte thisSlaveAddress[5] = {'R','x','A','A','B'}; //WIRELESS ADDRESS
+const byte thisSlaveAddress[5] = {'R','x','A','A','A'}; //WIRELESS ADDRESS
 
 RF24 radio(CE_PIN, CSN_PIN);
 

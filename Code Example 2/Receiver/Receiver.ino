@@ -1,10 +1,5 @@
-/*
- * Copyright 2021 Animation Prep Studios - All rights reserved.
- * If you use this code in production or other products you must give attribution to Animation Prep Studios.
- * 
- * This example shows wireless communication using a Arduino Uno attached to a PC running Animation Prep Studio - Mocap Fusion (LUXOR) and receives data from wireless mocap gloves with nRF24+.
- */
- 
+// SimpleTxAckPayload - the master base receiver
+
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
@@ -16,12 +11,10 @@ RF24 radio(CE_PIN, CSN_PIN); // Create a Radio
 
 char dataToSend[1] = "!";
 
-const int ackDataSize = 8;
-char data_right[ackDataSize] = {0, 0, 0, 0, 0, 0, 0, 0}; // to hold the acknowledgement data from the right glove controller.
-char data_left[ackDataSize] = {0, 0, 0, 0, 0, 0, 0, 0}; // to hold the acknowledgement data from the left glove controller.
+const int ackDataSize = 16;
+char data[ackDataSize] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // to hold the acknowledgement data from the glove controller.
 
-const byte controllerAddress_Right[5] = {'R','x','A','A','B'};
-const byte controllerAddress_Left[5] = {'R','x','A','A','A'};
+const byte controllerAddress[5] = {'R','x','A','A','A'};
 
 bool newData = false;
 
@@ -40,8 +33,7 @@ void setup() {
 //=============
 
 void loop() {
-    sendForAck(controllerAddress_Right, data_right);
-    sendForAck(controllerAddress_Left, data_left);
+    sendForAck(controllerAddress, data);
     writeData();
 }
 
@@ -65,8 +57,7 @@ void sendForAck(byte *controllerAddress, char *buff) {
 
 void writeData() {
     if (newData == true) {
-        Serial.write(data_right, 8);
-        Serial.write(data_left, 8);
+        Serial.write(data, 16);
         Serial.println("");
         newData = false;
     }
