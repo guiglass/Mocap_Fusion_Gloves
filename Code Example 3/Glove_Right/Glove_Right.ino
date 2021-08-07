@@ -13,7 +13,7 @@
 #define CE_PIN  9
 #define CSN_PIN 10
 
-const byte thisSlaveAddress[5] = {'R','x','A','A','B'}; //RIGHT HAND ADDRESS
+const byte thisSlaveAddress[5] = {'R','x','A','A','B'}; //LEFT HAND ADDRESS
 
 RF24 radio(CE_PIN, CSN_PIN);
 
@@ -24,12 +24,22 @@ bool newData = false;
 //==============
 
 void setup() {
+
+/*  
+    //ARDUINO UNO
     pinMode(A0, INPUT);
     pinMode(A1, INPUT);
     pinMode(A2, INPUT);
     pinMode(A3, INPUT);  
     pinMode(A4, INPUT);
-
+*/
+    //BONEDUINO    
+    pinMode(A0, INPUT);
+    pinMode(A1, INPUT);
+    pinMode(A2, INPUT);
+    pinMode(A3, INPUT);  
+    pinMode(A6, INPUT);
+        
     radio.begin();
     radio.setDataRate( RF24_1MBPS );
     radio.setPALevel(RF24_PA_HIGH);
@@ -48,7 +58,7 @@ void loop() {
     getData();
 }
 
-//==========
+//============
 
 void getData() {
     if ( radio.available() ) {
@@ -57,30 +67,26 @@ void getData() {
         newData = true;
     }
 }
-
-//================
-
-void showData() {
-    if (newData == true) {
-        Serial.print("Data received ");
-        Serial.println(dataReceived);
-        Serial.print(" ackPayload sent ");
-        Serial.print(ackData[0]);
-        Serial.print(", ");
-        Serial.println(ackData[1]);
-        newData = false;
-    }
-}
-
 //================
 
 void updateReplyData() {
+    //For Boneduino must write all pins low
+
+/*
+    //ARDUINO UNO
     int _A0 = analogRead(A0);  
     int _A1 = analogRead(A1);  
     int _A2 = analogRead(A2);  
     int _A3 = analogRead(A3);
     int _A4 = analogRead(A4);
-  
+*/
+    //BONEDUINO    
+    int _A0 = analogRead(A0);  
+    int _A1 = analogRead(A1);  
+    int _A2 = analogRead(A2);  
+    int _A3 = analogRead(A3);
+    int _A4 = analogRead(A6);
+    
     ackData[0] = _A0 & 0b0000000011111111;
     ackData[1] = ((_A0 & 0b0000111100000000) >> 8) + ((_A1 & 0b0000000000001111) << 4);
     ackData[2] = ((_A1 & 0b0000111111110000) >> 4);
