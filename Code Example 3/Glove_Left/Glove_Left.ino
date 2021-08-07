@@ -85,7 +85,7 @@ void updateReplyData() {
     int _A1 = analogRead(A1);  
     int _A2 = analogRead(A2);  
     int _A3 = analogRead(A3);
-    int _A4 = analogRead(A4);
+    int _A4 = analogRead(A6);
     
     ackData[0] = _A0 & 0b0000000011111111;
     ackData[1] = ((_A0 & 0b0000111100000000) >> 8) + ((_A1 & 0b0000000000001111) << 4);
