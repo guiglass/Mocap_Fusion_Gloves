@@ -17,6 +17,8 @@ Knit Gloves: https://www.amazon.com/OPT-Brand-Winter-Gloves-Wholesale/dp/B07XZL1
 
 Dynaflex (black): https://www.amazon.com/18280-DYNAFLEX-Black-Building-Material/dp/B000BQWXEO
 
+Boneduino with nRF24 raido: http://duinopeak.com/index.php?route=product/product&manufacturer_id=9&product_id=30
+
 <br>
 <br>
 Wiring Diagrams:
@@ -37,5 +39,4 @@ Example #2 Uses a Arduino Mega for for the gloves and sends the finger data wire
 ![Code Example 1](https://github.com/guiglass/Mocap_Fusion_Gloves/blob/main/Code%20Example%203/connection_guide_template_3.png)
 Example #3 two Arduinos Unos or Boneduinos connected to each glove individually, both send the finger data wirelessly to a receiving Arduion Uno connected to the mocap PC through USB.
 
-Boneduino with nRF24 raido: http://duinopeak.com/index.php?route=product/product&manufacturer_id=9&product_id=30
 
