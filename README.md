@@ -21,6 +21,7 @@ Dynaflex (black): https://www.amazon.com/18280-DYNAFLEX-Black-Building-Material/
 <br>
 Wiring Diagrams:
 <br>
+
 ![Code Example 1](https://github.com/guiglass/Mocap_Fusion_Gloves/blob/main/Code%20Example%201/connection_guide_template_1.png)
 Example #1 requires only a single Arduino Mega and is wired directly to the mocap PC through USB.
 
