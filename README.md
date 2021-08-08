@@ -9,11 +9,11 @@ Files for assembling and programming these super low latency "DIY" motion captur
 <br>
 Parts:
 <br>
-nRF24 wireless radios (RP-SMA): https://www.sparkfun.com/products/705
+nRF24 wireless radio (RP-SMA): https://www.sparkfun.com/products/705
 
-nRF24 wireless radios: https://www.sparkfun.com/products/691
+nRF24 wireless radio: https://www.sparkfun.com/products/691
 
-SEN-08606 Flex Sensors: https://www.sparkfun.com/products/8606
+SEN-08606 Flex Sensor: https://www.sparkfun.com/products/8606
 
 Knit Gloves: https://www.amazon.com/OPT-Brand-Winter-Gloves-Wholesale/dp/B07XZL1ZK8
 
