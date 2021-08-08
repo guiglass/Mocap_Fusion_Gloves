@@ -37,6 +37,6 @@ Example #2 Uses a Arduino Mega for for the gloves and sends the finger data wire
 <br>
 
 ![Code Example 1](https://github.com/guiglass/Mocap_Fusion_Gloves/blob/main/Code%20Example%203/connection_guide_template_3.png)
-Example #3 two Arduinos Unos or Boneduinos connected to each glove individually, both send the finger data wirelessly to a receiving Arduion Uno connected to the mocap PC through USB.
+Example #3 two Arduinos Unos or Boneduinos connected to each glove individually, both send the finger data wirelessly to a receiving Arduino Uno connected to the mocap PC through USB.
 
 
