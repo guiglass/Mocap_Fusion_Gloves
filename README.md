@@ -2,7 +2,7 @@
 Arduino/SteamVR motion capture gloves. Check out more of my free motion capture tools and apps at www.MocapFusion.com
 <br>
 ## Assembly Guide:
-[![Youtube Tutorial](https://raw.githubusercontent.com/guiglass/LUXOR/gh-pages/img/fusion_gloves/fusion_gloves_thumb.png)](https://www.youtube.com/watch?v=PCBvUHJH8Gw)
+[![Youtube Tutorial](https://raw.githubusercontent.com/guiglass/LUXOR/gh-pages/img/fusion_gloves/IMG_E0795.JPG)](https://www.youtube.com/watch?v=PCBvUHJH8Gw)
 <br>
 Files for assembling and programming these super low latency "DIY" motion capture glove using an Arduino and 5x SEN-08606 Flex Sensor 4.5" for each finger and a Vive tracker that is strapped to the 3D printed hand strap.
 <br>
